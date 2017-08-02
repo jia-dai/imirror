@@ -16,15 +16,12 @@
           <News></News>
         </div>
         <div class="right">
-          <ul id="outlook"></ul>
+          <Forecast></Forecast>
         </div>
       </section>
     </div>
     <div class="row">
-      <div id="yiyan">
-        <h3 class="words"></h3>
-        <h5 class="source"></h5>
-      </div>
+      <Yiyan></Yiyan>
     </div>
     <div class="galleria"></div>
   </div>
@@ -34,6 +31,8 @@
   import Datetime from './components/Datetime.vue'
   import News from './components/News.vue'
   import Weather from './components/Weather.vue'
+  import Forecast from './components/Forecast.vue'
+  import Yiyan from './components/Yiyan.vue'
 
   export default {
       //name: 'app',
@@ -43,7 +42,9 @@
       components: {
           Datetime,
           News,
-          Weather
+          Weather,
+          Forecast,
+          Yiyan
       }
   }
 </script>

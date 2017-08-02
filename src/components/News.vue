@@ -1,7 +1,7 @@
 <template>
     <div id="news-wrap">
         <ul id="news" v-if="news.length" :style="{ top }">
-            <li v-for="item in news" class="panel">
+            <li v-for="item in news" class="panel_news panel">
                 <div class="news_title">{{item.title}}</div>
                 <div class="news_digest">{{item.digest}}</div>
             </li>
@@ -20,7 +20,7 @@
         },
         computed: {
             top() {
-                return - this.activeIndex * 60 + 'px';
+                return - this.activeIndex * 90 + 'px';
             }
         },
         mounted () {
@@ -42,7 +42,7 @@
                         return res.json();
                     }).then(function(json){
                         self.news = json.query.results.json.T1348647853363;
-                        console.log(self.news)
+                        //console.log(self.news)
                     }).catch(function(error) { console.log(error); });
             }
         }
@@ -51,7 +51,7 @@
 
 <style>
     #news-wrap {
-        height: 180px;
+        height: 181px;
         overflow: hidden;
     }
     #news {
@@ -76,5 +76,12 @@
         padding: 0 5px 0 5px;
         font-size: 0.86em;
         color: #ccc;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .panel_news {
+        height: 90px !important;
     }
 </style>
