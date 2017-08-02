@@ -26,7 +26,7 @@
         mounted () {
             this.updateNews();
             setInterval(_ => {
-                if(this.activeIndex < this.news.length) {
+                if(this.activeIndex < this.news.length-2) {
                     this.activeIndex += 1;
                 } else {
                     this.activeIndex = 0;

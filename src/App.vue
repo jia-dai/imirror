@@ -6,8 +6,7 @@
           <Datetime></Datetime>
         </div>
         <div class="right">
-          <div id="weather"></div>
-          <div id="temp"></div>
+          <Weather></Weather>
         </div>
       </section>
     </div>
@@ -34,6 +33,7 @@
 <script>
   import Datetime from './components/Datetime.vue'
   import News from './components/News.vue'
+  import Weather from './components/Weather.vue'
 
   export default {
       //name: 'app',
@@ -42,7 +42,8 @@
       },
       components: {
           Datetime,
-          News
+          News,
+          Weather
       }
   }
 </script>
