@@ -11,7 +11,8 @@
   "dependencies": {
     "echarts": "^3.6.2",
     "lunar-calendar": "^0.1.4",
-    "vue": "^2.3.3"
+    "vue": "^2.3.3",
+    "vue-slide-mini": "^1.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

@@ -1,7 +1,7 @@
 <template>
     <div id="yiyan">
         <h3 class="words">{{yiyan.hitokoto}}</h3>
-        <h5 class="source" v-if="yiyan.from.length>0">——《{{yiyan.from}}》</h5>
+        <h5 class="source" v-if="yiyan.from">——《{{yiyan.from}}》</h5>
     </div>
 </template>
 

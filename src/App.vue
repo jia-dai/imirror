@@ -23,7 +23,7 @@
     <div class="row">
       <Yiyan></Yiyan>
     </div>
-    <div class="galleria"></div>
+    <Flickr></Flickr>
   </div>
 </template>
 
@@ -33,6 +33,7 @@
   import Weather from './components/Weather.vue'
   import Forecast from './components/Forecast.vue'
   import Yiyan from './components/Yiyan.vue'
+  import Flickr from './components/Flickr.vue'
 
   export default {
       //name: 'app',
@@ -44,7 +45,8 @@
           News,
           Weather,
           Forecast,
-          Yiyan
+          Yiyan,
+          Flickr
       }
   }
 </script>
