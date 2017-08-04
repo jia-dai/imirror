@@ -4,6 +4,11 @@
             <h2><img id="weather-icon" :src="imgUrl" width="101" height="101"></img> {{weather.now.tmp}}&deg;</h2>
             <div id="region">{{weather.basic.city}}</div>
             <div id="indexes">
+                <div><span>体感温度</span><br>{{weather.now.fl}}&deg;</div>
+                <div><span>相对湿度</span><br>{{weather.now.hum}}<small>%</small></div>
+                <div><span>空气质量</span><br>{{weather.aqi.city.qlty}}</div>
+                <div><span>PM2.5</span><br>{{weather.aqi.city.pm25}}</div>
+                <!--
                 <span>体感温度：{{weather.now.fl}}&deg;</span>
                 <span>能见度：{{weather.now.vis}}km</span>
                 <span>相对湿度：{{weather.now.hum}}%</span>
@@ -12,6 +17,7 @@
                 <span>PM2.5：{{weather.aqi.city.pm25}}</span>
                 <span v-if="room_temp>0">室内温度：°</span>
                 <span v-if="room_hum>0">室内湿度：%</span>
+                -->
             </div>
         </div>
     </div>
@@ -63,8 +69,17 @@
         text-align: right;
         /*margin-bottom: 20px;*/
     }
-    #indexes span {
-        width: 180px;
+    #indexes div {
+        width: 99px;
         float: right;
+        border-left: #ccc 1px solid;
+        text-align: center;
+    }
+    #indexes div:last-child {
+        border-left: none;
+    }
+    #indexes div span {
+        font-size: 0.66em;
+        color: #999;
     }
 </style>
