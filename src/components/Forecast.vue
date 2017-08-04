@@ -5,7 +5,7 @@
                 <div class="day_name">{{item.date}}</div>
                 <div class="day_icon"><img :src="item.imgUrl" style="width:36px; height:36px" width="36" height="36"></div>
                 <div class="day_text_wrapper"><p class="day_text">{{item.cond.txt_d}}<span v-if="item.cond.txt_d != item.cond.txt_n">转{{item.cond.txt_n}}</span></p></div>
-                <div class="temperature_range">{{item.tmp.min}}~{{item.tmp.max}}&deg;</div>
+                <div class="temperature_range">{{item.tmp.max}}&deg; / {{item.tmp.min}}&deg;</div>
             </li>
         </ul>
     </div>
@@ -21,7 +21,7 @@
         },
         mounted () {
             this.updateForecast();
-            setInterval(this.updateForecast, 60000)
+            setInterval(this.updateForecast, 10000)
         },
         methods: {
             updateForecast () {
@@ -60,6 +60,9 @@
         border-top: 1px solid #DDD;
         border-bottom: 1px solid #999;
     }
+    #forecast div {
+        font-size: 1.1em;
+    }
 
     i {
         color: #F8F8FF;
@@ -78,7 +81,6 @@
     }
 
     #weather div, #temp {
-        height: 30px;
         line-height: 30px;
         /*margin-right: 100px;
         font-family: 'Open Sans', sans-serif;*/
