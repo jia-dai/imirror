@@ -31,3 +31,20 @@
         }
     }
 </script>
+
+<style>
+    #yiyan {
+        padding: 200px 0 20px 0;
+    }
+    #yiyan .words {
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    #yiyan .source {
+        min-width: 30%;
+        float: right;
+        font-size: 14px;
+        margin: 0;
+    }
+</style>
