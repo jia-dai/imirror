@@ -21,7 +21,7 @@
             return {
                 weather: '',
                 imgUrl: '',
-                room_temp: 30,
+                room_temp: 0,
                 room_hum: 0
             }
         },
