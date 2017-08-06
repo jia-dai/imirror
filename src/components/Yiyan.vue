@@ -15,7 +15,7 @@
         },
         mounted() {
             this.updateYiyan();
-            setInterval(this.updateYiyan, 60000)
+            setInterval(this.updateYiyan, 120000)
         },
         methods: {
             updateYiyan() {
@@ -25,7 +25,7 @@
                     return res.json();
                 }).then(function(json){
                     self.yiyan = json;
-                    console.log(self.yiyan)
+                    //console.log(self.yiyan)
                 }).catch(function(error) { console.log(error); });
             }
         }
