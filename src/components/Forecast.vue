@@ -21,7 +21,7 @@
         },
         mounted () {
             this.updateForecast();
-            setInterval(this.updateForecast, 10000)
+            setInterval(this.updateForecast, 60000)
         },
         methods: {
             updateForecast () {
@@ -38,7 +38,7 @@
                         forecasts[i].imgUrl = './src/assets/image/weather/'+Math.max(forecasts[i].cond.code_d, forecasts[i].cond.code_n)+'.png';
                     }
 
-                    console.log(forecasts);
+                    //console.log(forecasts);
                     this.forecast = forecasts;
 
                 }
@@ -70,21 +70,6 @@
         font-weight: normal;
         font-style: normal;
         line-height: 1.0;
-    }
-
-    #weather h2 {
-        margin: 0 0 3px;
-        color: #F8F8FF;
-        font-size: 80px;
-        font-weight: 300;
-        text-align: right;
-    }
-
-    #weather div, #temp {
-        line-height: 30px;
-        /*margin-right: 100px;
-        font-family: 'Open Sans', sans-serif;*/
-        font-size: 1.5em;
     }
 
     .panel {
