@@ -3,11 +3,11 @@
         <p id="time">{{hours}}:{{minutes}}<sup>{{seconds}}</sup></p>
         <p id="date">{{month}}月{{date}}日 星期{{day}}</p>
         <p id="lunar">{{lunar.GanZhiYear}}年 {{lunar.lunarMonthName}} {{lunar.lunarDayName}}</p>
-        <div>
+        <p>
             <span v-if="lunar.term">{{lunar.term}}</span>
             <span v-if="lunar.solarFestival">{{lunar.solarFestival}}</span>
             <span v-if="lunar.lunarFestival">{{lunar.lunarFestival}}</span>
-        </div>
+        </p>
     </div>
 </template>
 
@@ -33,15 +33,15 @@
         },
         methods: {
             updateDateTime () {
-                let days = new Array("日", "一", "二", "三", "四", "五", "六");
+                let days = ["日", "一", "二", "三", "四", "五", "六"];
                 let now = new Date();
                 let current = {
                     year : now.getFullYear(),
                     month : now.getMonth()+1,
                     day : now.getDate()
                 };
-                let currentLunar = LunarCalendar.solarToLunar(current.year, current.month, current.day);
-                this.month = now.getMonth();
+                //let currentLunar = LunarCalendar.solarToLunar(current.year, current.month, current.day);
+                this.month = now.getMonth()+1;
                 this.date = now.getDate();
                 this.day = days[now.getDay()];
                 this.hours = now.getHours();
@@ -62,6 +62,7 @@
 <style>
     #datetime p {
         font-size: 1.5em;
+        margin: 10px 0;
     }
 
     #time {
